@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+
+    <title>FRP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/960.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div class="container_12 ">
+    <div class="grid_12">
+
+            <button onclick="hideShow()">Hide-show forms</button>
+
+
+    </div>
+    <div class="grid_12 ">
+
+        <div id="newPerson" class=" border">
+
+                <label for="lname">Charachter Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="..">  
+                <label for="lname">Charachter Race</label>
+                <input type="text" id="lname" name="lastname" placeholder="..">
+                <label for="lname">Charachter Height</label>
+                <input type="text" id="lname" name="lastname" placeholder="..">
+                <label for="lname">Charachter age</label>
+                <input type="text" id="lname" name="lastname" placeholder="..">
+                <label for="lname">Charachter Waght</label>
+                <input type="text" id="lname" name="lastname" placeholder="..">
+                <label class="center-text" >Charachter gender</label>
+                            <select id="atr-val">
+                              <option value="1">Female</option>
+                              <option value="2">Male</option>
+                     
+                </select>       
+                <input type="submit" value="Submit">
+
+        </div>
+
+    </div>
+    <div class="grid_12 border center-text">
+        <h3>Name of Charachter</h3>
+    </div>
+    <div class="grid_12 border center-text">
+        <ul class="list-h" >
+            <li><p>Age:______</p></li>
+            <li><p>Height:______</p></li>
+            <li><p>Gender:______</p></li>
+            <li><p>Weight:______</p></li>
+        </ul>
+    </div>
+    <div class="grid_12 border center-text">
+            <ul class="list-h" >
+                <li><p>Armor:______</p></li>
+                <li><p>HP:______</p></li>
+                <li><p>Eavde:______</p></li>
+                <li><p>Damage reduction:______</p></li>
+            </ul>
+        </div>
+    <div class="grid_3">
+            <div id="addAtribute" class="atribute-add border">
+                    <form >
+                            <label class="center-text" >Atrubute level:</label>
+                            <select id="atr-val">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              
+                            </select>
+                        
+                            <label class="center-text"  >Atribute type:</label>
+                            <select id="atr-type">
+                              <option id="str1" value="Strength">Strength</option>
+                              <option id="agi1" value="Agility">Agility</option>
+                              <option value="Toughness">Toughness</option>
+                              <option value="Percepcion">Percepcion</option>
+                              <option value="Inteligance">Inteligance</option>
+                              <option value="Knowlage">Knowlage</option>
+                              <option value="Luck">Luck</option>
+                            </select>
+                          
+                            <!-- <button type="button" id="setAtribute">Set atribute</button> -->
+                    </form>    
+            </div>
+
+
+            <div class="stat border">
+                    <h3 class="atribut">Strength: <span id="str">0</span></h3>                    
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Agility: <span id="agi">0</span></h3>                   
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Toughness: <span id="tfn">0</span></h3>                  
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Percepcion: <span id="per">0</span></h3>                
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Inteligance: <span id="int">0</span></h3>                  
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Knowlage: <span id="knw">0</span></h3>
+            </div>
+            <div class="stat border">
+                    <h3 class="atribut">Luck: <span id="luck">0</span></h3>
+            </div>
+
+    </div>
+    <div class="grid_9">
+            <div id="addPerk" class="new-pern  border">
+                    <h3 class="label">Add new perk</h3>
+                        <div>
+                            <form >
+                              <label for="fname">Name of perk</label>
+                              <input type="text" id="fname" name="firstname" placeholder="perk name..">
+                          
+                              <label for="lname">Description</label>
+                              <input type="text" id="lname" name="lastname" placeholder="..">
+                          
+                              <label for="country">Influenced by:</label>
+                              <select id="country" name="country">
+                                <option value="Strength">Strength</option>
+                                <option value="Agility">Agility</option>
+                                <option value="Toughness">Toughness</option>
+                                <option value="Percepcion">Percepcion</option>
+                                <option value="Inteligance">Inteligance</option>
+                                <option value="Knowlage">Knowlage</option>
+                                <option value="Luck">Luck</option>
+                              </select>
+                            
+                              <input type="submit" value="Submit">
+                            </form>
+                        </div>
+            
+             </div>
+
+             <div class="border perks">
+
+
+                    <ul class="perk-list">
+                            <li class="perk">
+                                <div class="perk-div">
+                                    <p class="prek-d large">Perk name: <span class="name-p">Lore   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Influenced by: <span class="infb-p">Int   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Score: <span class="score-p">4   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp <a class="incrise-p"><i class="fas fa-plus-circle"></i></a>  
+                                        <a class="decrise-p"><i class="fas fa-minus-circle"></i></a></p>
+                                    <p class="read">
+                                            Description: Novice: You have studied hard. When you make a successful
+                                            Intelligence test with a lore focus, the GM should give you an
+                                            extra piece of information on the topic. A lore focus is any Intelligence
+                                            focus with the word “lore” in it, such as Cultural Lore and
+                                            Historical Lore. The GM determines the additional information
+                                            and it may or may not be pertinent to the main question at hand.
+                                            <br>
+                                            Journeyman: You are an accomplished researcher. When
+                                            making Intelligence (Research) tests as part of an advanced
+                                            test, you gain a +1 bonus to the result of each Stunt Die. This
+                                            allows you to reach the success threshold faster. Advanced
+                                            tests are detailed in Chapter 8: Mastering the Rules.
+                                            <br>
+                                            Master: While your knowledge is vast, you have two areas
+                                            of particular specialization. Pick any two of your lore focuses.
+                                            When making tests using those focuses, you can re-roll a
+                                            failed test but you must keep the result of the second roll. 
+                                    </p>
+                                </div>
+                                <hr>
+                            </li>
+                            <li class="perk">
+                                <div class="perk-div">
+                                    <p class="prek-d large">Perk name: <span class="name-p">Lore   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Influenced by: <span class="infb-p">Int   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Score: <span class="score-p">4   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp <a class="incrise-p"><i class="fas fa-plus-circle"></i></a>  
+                                        <a class="decrise-p"><i class="fas fa-minus-circle"></i></a></p>
+                                    <p class="read">
+                                            Description: Novice: You have studied hard. When you make a successful
+                                            Intelligence test with a lore focus, the GM should give you an
+                                            extra piece of information on the topic. A lore focus is any Intelligence
+                                            focus with the word “lore” in it, such as Cultural Lore and
+                                            Historical Lore. The GM determines the additional information
+                                            and it may or may not be pertinent to the main question at hand.
+                                            <br>
+                                            Journeyman: You are an accomplished researcher. When
+                                            making Intelligence (Research) tests as part of an advanced
+                                            test, you gain a +1 bonus to the result of each Stunt Die. This
+                                            allows you to reach the success threshold faster. Advanced
+                                            tests are detailed in Chapter 8: Mastering the Rules.
+                                            <br>
+                                            Master: While your knowledge is vast, you have two areas
+                                            of particular specialization. Pick any two of your lore focuses.
+                                            When making tests using those focuses, you can re-roll a
+                                            failed test but you must keep the result of the second roll. 
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="perk">
+                                <div class="perk-div">
+                                    <p class="prek-d large">Perk name: <span class="name-p">Lore   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Influenced by: <span class="infb-p">Int   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp Score: <span class="score-p">4   </span> 
+                                        &nbsp &nbsp &nbsp &nbsp <a class="incrise-p"><i class="fas fa-plus-circle"></i></a>  
+                                        <a class="decrise-p"><i class="fas fa-minus-circle"></i></a></p>
+                                    <p class="read">
+                                            Description: Novice: You have studied hard. When you make a successful
+                                            Intelligence test with a lore focus, the GM should give you an
+                                            extra piece of information on the topic. A lore focus is any Intelligence
+                                            focus with the word “lore” in it, such as Cultural Lore and
+                                            Historical Lore. The GM determines the additional information
+                                            and it may or may not be pertinent to the main question at hand.
+                                            <br>
+                                            Journeyman: You are an accomplished researcher. When
+                                            making Intelligence (Research) tests as part of an advanced
+                                            test, you gain a +1 bonus to the result of each Stunt Die. This
+                                            allows you to reach the success threshold faster. Advanced
+                                            tests are detailed in Chapter 8: Mastering the Rules.
+                                            <br>
+                                            Master: While your knowledge is vast, you have two areas
+                                            of particular specialization. Pick any two of your lore focuses.
+                                            When making tests using those focuses, you can re-roll a
+                                            failed test but you must keep the result of the second roll. 
+                                    </p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+
+             </div>
+        
+    </div>
+
+    <div class="grid_12">
+        <div  id="addArmor"  class="new-pern  border">
+            <h3 class="label">Armor</h3>
+                <div>
+                    <form >
+                      <label for="fname"> Armor name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="perk name..">
+                  
+                    <label class="center-text" >Armor type</label>
+                            <select id="atr-val">
+                              <option value="1">Cloth</option>
+                              <option value="2">Light</option>
+                              <option value="3">Medium</option>
+                              <option value="4">Heavy</option>
+                              <option value="5">External</option>                         
+                              
+                    </select>
+
+                    <label class="center-text" >Armor bonus</label>
+                            <select id="atr-val">
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                              <option value="3">4</option>
+                              <option value="4">5</option>
+                              <option value="5">6</option>
+                              <option value="1">7</option>
+                              <option value="2">8</option>
+                              <option value="3">9</option>
+                              <option value="4">10</option>
+                              <option value="5">11</option>                          
+                              
+                    </select>
+
+                    <label class="center-text" >Armor dmg reduction</label>
+                            <select id="atr-val">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>                         
+                              
+                    </select>
+
+                    <label class="center-text" >Armor durability</label>
+                            <select id="atr-val">
+                              <option value="1">5</option>
+                              <option value="2">10</option>
+                              <option value="3">15</option>
+                              <option value="4">20</option>
+                              <option value="4">25</option>
+                                                      
+                              
+                    </select>
+                  
+                      
+                    
+                      <input type="submit" value="Submit">
+                    </form>
+                </div>
+    
+     </div>
+    </div>
+
+    <div class="grid_12">
+        <div  id="addWeapon"  class="new-pern  border">
+            <h3 class="label">Add new weapon</h3>
+                <div>
+                    <form >
+                      <label for="fname">Weapon name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="perk name..">
+                  
+                    
+                    <label class="center-text" >Damage</label>
+                            <select id="atr-val">
+                            <option value="1">1d6</option>
+                            <option value="1">2d6</option>
+                            <option value="2">3d6</option>                                                     
+                              
+                    </select>
+                    <label class="center-text" >Mele or range</label>
+                            <select id="atr-val">
+                            <option value="1">Mele</option>
+                            <option value="1">Range</option>
+                                                                              
+                              
+                    </select>
+
+                    <label class="center-text" >Additional bonus</label>
+                            <select id="atr-val">
+                                    <option value="1">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>                                                      
+                              
+                    </select>
+
+                    <label class="center-text" >Additional damage</label>
+                            <select id="atr-val">
+                                    <option value="1">0</option>
+                              <option value="1">1d6</option>
+                              <option value="2">2d6</option>                        
+                                                      
+                              
+                    </select>
+
+                    <label for="fname">Additional demage type</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Additional demage type"> 
+                  
+                    <label for="lname">Description</label>
+                              <input type="text" id="lname" name="lastname" placeholder="..">  
+                    
+                      <input type="submit" value="Submit">
+                    </form>
+                </div>
+    
+     </div>
+    </div>
+
+
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

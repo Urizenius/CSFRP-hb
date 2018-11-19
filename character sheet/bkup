@@ -1,0 +1,171 @@
+<div class="basic-info">
+    <h4>Charachter sheet</h4>
+    <ul class="charachter-infos">
+        <li>Charachter name:<span>__________ </span> </li>
+        <li>Charachter age:<span>__________ </span> </li>
+        <li>Charachter gender:<span>__________ </span></li>
+        <li>Player name:<span>__________</span> </li>
+        <li>Charachter discription:<span>__________ </span> </li>
+    </ul>
+</div>
+<div class="curent-info">
+        <ul class="basic-infos">
+            <li><h4 class="atribut">Hp: 0</h3></li>
+            <li><h4 class="atribut">Armor: 0</h3></li>
+            <li><h4 class="atribut">Evade: 0</h3></li>
+            <li><h4 class="atribut">Reduction: 0</h3></li>
+        </ul>
+</div>
+<div class="left-plch">
+    <div class="atribute-add">
+            <form >
+                    <label for="country">Atrubute level:</label>
+                    <select id="atr-val">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      
+                    </select>
+                
+                    <label for="country">atribute type:</label>
+                    <select id="atr-type">
+                      <option id="str1" value="Strength">Strength</option>
+                      <option id="agi1" value="Agility">Agility</option>
+                      <option value="Toughness">Toughness</option>
+                      <option value="Percepcion">Percepcion</option>
+                      <option value="Inteligance">Inteligance</option>
+                      <option value="Knowlage">Knowlage</option>
+                      <option value="Luck">Luck</option>
+                    </select>
+                  
+                    <!-- <button type="button" id="setAtribute">Set atribute</button> -->
+            </form>    
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Strength: <span id="str">0</span></h3>
+        
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Agility: <span id="agi">0</span></h3>
+       
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Toughness: <span id="tfn">0</span></h3>
+      
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Percepcion: <span id="per">0</span></h3>
+       
+    
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Inteligance: <span id="int">0</span></h3>
+       
+        
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Knowlage: <span id="knw">0</span></h3>
+        
+    </div>
+    <div class="stat">
+        <h3 class="atribut">Luck: <span id="luck">0</span></h3>
+       
+        
+    </div>
+</div>
+<div class="right-plch">
+
+    <div class="new-pern">
+        <h3>Add new perk</h3>
+            <div>
+                <form >
+                  <label for="fname">Name of perk</label>
+                  <input type="text" id="fname" name="firstname" placeholder="perk name..">
+              
+                  <label for="lname">Short discription</label>
+                  <input type="text" id="lname" name="lastname" placeholder="..">
+              
+                  <label for="country">Influenced by:</label>
+                  <select id="country" name="country">
+                    <option value="Strength">Strength</option>
+                    <option value="Agility">Agility</option>
+                    <option value="Toughness">Toughness</option>
+                    <option value="Percepcion">Percepcion</option>
+                    <option value="Inteligance">Inteligance</option>
+                    <option value="Knowlage">Knowlage</option>
+                    <option value="Luck">Luck</option>
+                  </select>
+                
+                  <input type="submit" value="Submit">
+                </form>
+            </div>
+
+    </div>
+
+
+    <ul class="perk-list">
+        <li class="perk">
+            <div class="perk-div">
+                <p class="prek-d">Name of perk:<span class="name-p">_____</span> Level:<span class="level-p">_____</span> Score:<span class="score-p">_____</span> <a class="incrise-p">+</a>  <a class="decrise-p">-</a></p>
+            </div>
+        </li>
+        <li class="perk">
+            <div class="perk-div">
+                <p class="prek-d">Name of perk:<span class="name-p">_____</span> Level:<span class="level-p">_____</span> Score:<span class="score-p">_____</span> <a class="incrise-p">+</a>  <a class="decrise-p">-</a></p>
+            </div>
+        </li>
+        <li class="perk">
+            <div class="perk-div">
+                <p class="prek-d">Name of perk:<span class="name-p">_____</span> Level:<span class="level-p">_____</span> Score:<span class="score-p">_____</span> <a class="incrise-p">+</a>  <a class="decrise-p">-</a></p>
+            </div>
+        </li>
+        <li class="perk">
+            <div class="perk-div">
+                <p class="prek-d">Name of perk:<span class="name-p">_____</span> Level:<span class="level-p">_____</span> Score:<span class="score-p">_____</span> <a class="incrise-p">+</a>  <a class="decrise-p">-</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div id="app"></div>
+
+    <script src="js/main.js">
+    
+    
+    
+    
+    </script>
+
+
+
+
+  // if(attrType === "Strength"){     
+  //     str.innerHTML =  x.value
+  // }
+  // else if(attrType === "Agility"){
+  //     agi.innerHTML =  x.value
+  // }
+  // else if(attrType === "Toughness"){
+  //     y = x.value
+  //     tfn.innerHTML = y
+  // }
+  // else if(attrType === "Percepcion"){
+  //     y = x.value
+  //     per.innerHTML = y
+  // }
+  // else if(attrType === "Inteligance"){
+  //     y = x.value
+  //     int.innerHTML = y
+  // }
+  // else if(attrType === "Knowlage"){
+  //     y = x.value
+  //     knw.innerHTML = y
+  // }
+  // else(attrType = "Luck");{
+  //     y = x.value
+  //     luck.innerHTML = y
+  // }
